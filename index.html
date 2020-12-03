@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+
+    <link rel="icon" href="images/favicon.ico"/>
+    <title>My Portfolio</title>
+</head>
+<header>
+    <!-- nav bar -->
+    <nav id="nav" class="navbar navbar-expand justify-content-center">
+        <ul id="nav-list" class="navbar-nav pr-4">
+            <li class="nav-item">
+                <a class="nav-link" role="button" data-toggle="collapse" href="#project-card"><h4 class="nav-header">
+                    <code>projects</code></h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" role="button" data-toggle="collapse" href="#about-card"><h4
+                        class="nav-header active"><code>about</code></h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" role="button" data-toggle="collapse" href="#contact-card"><h4 class="nav-header">
+                    <code>contact</code></h4></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>
+<!-- container for all the projects, about, and contact cards -->
+<div class="container d-flex justify-content-center pr-5 pt-0" id="main-card">
+    <!-- about card -->
+    <div id="about-card" class="card  collapse show mb-2" data-parent="#main-card">
+        <!-- about image -->
+        <img id="about-image" class="card-img-top rounded-0 bg-black" src="images/profile-image.jpg" alt="profile image"/>
+        <!-- about paragraph-->
+        <div id="about-body" class="card-body card-body-theme">
+            <p>Hello World! My name is <strong>Ben Chadwick</strong>. I am an aspiring Back-End developer
+                with plenty of curiosity. My academic and free-time studies are currently
+                focused on Java, PHP, Python and mySQL. Outside of developing I like to spend my
+                weekend doing self-improvement activities like learning a new skill or spending time
+                with friends and family.
+            </p>
+        </div>
+    </div>
+
+    <!-- project card -->
+    <div id="project-card" class="collapse mb-5" data-parent="#main-card">
+        <!-- accordion of project titles -->
+        <div id="accordion">
+            <!-- snake card button -->
+            <div class="card bg-black">
+                <button class="btn btn-link my-0 text-left" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="false" aria-controls="collapseOne">
+                    <div class="card-header bg-black" id="headingOne">
+                        <h5 class="d-inline"><code>snake</code></h5>
+                        <code><span class="d-inline float-right badge badge-pill badge-java text-black mt-2">java</span></code>
+                    </div>
+                </button>
+                <!-- snake text -->
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Freetime project: Java 2D game of snake using acm's GraphicsProgram</h5>
+                        <a class="link-text" target="_blank" href="https://github.com/bchadwic/snake"><img
+                                class="mb-1 mr-1"
+                                src="images/github-icon.png"
+                                alt="github image"
+                                height="20" width="20">GitHub
+                            Repository</a><br>
+                        <span>Game Features:</span>
+                        <ul>
+                            <li>Displays score during gameplay and retains the highest score</li>
+                            <li>Increases difficulty as snake accumulates points</li>
+                            <li>Utilizes random apple locations</li>
+                            <li>Dynamically changes background of the snake dependant on difficulty</li>
+                        </ul>
+                        <!-- snake images -->
+                        <h5>Gameplay Images:</h5>
+                        <div class="project-images d-flex justify-content-center">
+                            <img class="img-fluid m-2 showcase-image" src="images/snakeGameplayInstructions.png" alt="snake image"/>
+                            <img class="img-fluid m-2 showcase-image" src="images/snakeGameplayLevelRed.png" alt="snake game over image"/>
+                        </div>
+                        <a href="#" class="float-right link-text m-2" role="button" data-toggle="collapse"
+                           data-target="#collapseOne"><code>▲ Collapse</code></a>
+                    </div>
+                </div>
+            </div>
+            <!-- notemaker card button -->
+            <div class="card bg-black">
+                <button class="btn btn-link collapsed my-0 text-left" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="d-inline"><code>notemaker</code></h5>
+                        <code><span class="d-inline float-right badge badge-pill badge-success text-black mt-2">python</span></code>
+                    </div>
+                </button>
+                <!-- note maker text -->
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Free-time project: Python note editor that creates multiple .txt notes by instantly saving /
+                            overwriting to a default pathway</h5>
+                        <a class="link-text" target="_blank" href="https://github.com/bchadwic/notemaker"><img
+                                class="mb-1 mr-1"
+                                src="images/github-icon.png"
+                                height="20"
+                                width="20"
+                                alt="github image">
+                            GitHub Repository</a><br>
+                        <span>Application Features:</span>
+                        <ul>
+                            <li>Saves multiple files in a set directory</li>
+                            <li>Allows for hot-key binding to quickly save and overwrite files</li>
+                            <li>Responsive to different operating systems</li>
+                        </ul>
+                        <!-- notemaker images -->
+                        <h5>Application Image:</h5>
+                        <div class="project-images d-flex justify-content-center">
+                            <img class="img-fluid showcase-image" src="images/notemaker_1.0.png" alt="image of notemaker"/>
+                        </div>
+                        <a href="#" class="float-right link-text m-2" role="button" data-toggle="collapse"
+                           data-target="#collapseTwo"><code>▲ Collapse</code></a>
+                    </div>
+                </div>
+            </div>
+            <!-- pacman card button -->
+            <div class="card bg-black">
+                <button class="btn btn-link collapsed my-0 text-left" data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="d-inline"><code>pacman</code></h5>
+                        <code><span class="d-inline float-right badge badge-pill badge-java text-black mt-2">java</span></code>
+                    </div>
+                </button>
+                <!-- pacman text -->
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Free-time project: Java Pacman game using JFrame, Keylistener, and Thread</h5>
+                        <a class="link-text" target="_blank" href="https://github.com/bchadwic/pacman"><img
+                                class="mb-1 mr-1"
+                                src="images/github-icon.png"
+                                height="20" width="20"
+                                alt="github image">
+                            GitHub Repository</a><br>
+                        <span>Game Features:</span>
+                        <ul>
+                            <li>Utilizes Multi-Threading for the Ghost and Pacman characters</li>
+                            <li>Characters, and Items objects have behaviours that can be manipulate the games
+                                difficulty
+                            </li>
+                            <li>Packaged with a default Game Map object that can be changed easily to make new levels
+                            </li>
+                        </ul>
+                        <!-- pacman image -->
+                        <h5>Game Image:</h5>
+                        <div class="project-images d-flex justify-content-center">
+                            <img class="img-fluid showcase-image" src="images/main-gameplay.png" alt="main gameplay image"/>
+                        </div>
+                        <a href="#" class="float-right link-text m-2" role="button" data-toggle="collapse"
+                           data-target="#collapseThree"><code>▲ Collapse</code></a>
+                    </div>
+                </div>
+            </div>
+            <!-- guestbook card button -->
+            <div class="card bg-black">
+                <button class="btn btn-link collapsed my-0 text-left" data-toggle="collapse" data-target="#collapseFour"
+                        aria-expanded="false" aria-controls="collapseThree">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="d-inline"><code>guestbook</code></h5>
+                        <code><span
+                                class="d-inline float-right badge badge-pill badge-php text-black mt-2">php</span></code>
+                        <code><span
+                                class="d-inline float-right badge badge-pill badge-info text-black mr-2 mt-2">mySQl</span></code>
+                    </div>
+                </button>
+                <!-- guestbook text -->
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>In-class project: PHP/mySQL server-side project that takes in a person's information to be
+                            stored as a contact</h5>
+                        <a class="link-text" target="_blank" href="https://github.com/bchadwic/guestbook"><img
+                                class="mb-1 mr-1"
+                                src="images/github-icon.png"
+                                height="20"
+                                width="20"
+                                alt="github image">
+                            GitHub Repository</a><br>
+                        <span>Site Features:</span>
+                        <ul>
+                            <li>Captures profile information</li>
+                            <li>Validates on the server before being placed in the database</li>
+                            <li>Authorizes admin user by a using a login session</li>
+                        </ul>
+                        <!-- guestbook website link -->
+                        <div>
+                            <h5>Website Link:</h5>
+                            <a href="http://bchadwick.greenriverdev.com/305/guestbook/index.php" target="_blank">
+                                <button class="d-inline btn btn-success p-2 mx-3">Guest Book</button>
+                            </a>
+                            <a href="http://bchadwick.greenriverdev.com/305/guestbook/admin.php" target="_blank">
+                                <button class="d-inline btn btn-danger p-2 px-4">Admin</button>
+                            </a>
+                        </div>
+                        <a href="#" class="float-right link-text m-2" role="button" data-toggle="collapse"
+                           data-target="#collapseFour"><code>▲ Collapse</code></a>
+                    </div>
+                </div>
+            </div>
+            <!-- cardgame card button -->
+            <div class="card bg-black">
+                <button class="btn btn-link collapsed my-0 text-left" data-toggle="collapse" data-target="#collapseFive"
+                        aria-expanded="false" aria-controls="collapseThree">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="d-inline"><code>cardgame</code></h5>
+                        <code><span class="d-inline float-right badge badge-pill badge-java text-black mt-2">java</span></code>
+                    </div>
+                </button>
+                <!-- cardgame text -->
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>In-class project: Java console program that uses demonstrates inheritance and composition of
+                            card types and associated decks</h5>
+                        <a class="link-text" target="_blank" href="https://github.com/bchadwic/cardgame"><img
+                                class="mb-1 mr-1"
+                                src="images/github-icon.png"
+                                height="20"
+                                width="20"
+                                alt="github image">
+                            GitHub Repository</a><br>
+                        <span>Project Features:</span>
+                        <ul>
+                            <li>Ability to play the game blackjack on console</li>
+                            <li>Implements super Card class which allows for the construction of different game decks
+                            </li>
+                            <li>Practices extensive JUnit testing to ensure all class constructors and classes perform
+                                as they should
+                            </li>
+                        </ul>
+                        <div class="project-images d-flex justify-content-center">
+                            <img class="img-fluid showcase-image" src="images/card-gameplay.png" alt="cardgame image"/>
+                        </div>
+                        <a href="#" class="float-right link-text m-2" role="button" data-toggle="collapse"
+                           data-target="#collapseFive"><code>▲ Collapse</code></a>
+                    </div>
+                </div>
+            </div>
+            <!-- turtle card button -->
+            <div class="card bg-black">
+                <button class="btn btn-link collapsed my-0 text-left" data-toggle="collapse" data-target="#collapseSix"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="card-header" id="headingSix">
+                        <h5 class="d-inline"><code>turtle</code></h5>
+                        <code><span
+                                class="d-inline float-right badge badge-pill badge-success text-black mt-2">python</span></code>
+                    </div>
+                </button>
+                <!-- turtle text -->
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>In-class project: Python graphic animation using Turtle</h5>
+                        <a class="link-text" target="_blank" href="https://github.com/bchadwic/triangle-illusion"><img
+                                class="mb-1 mr-1"
+                                src="images/github-icon.png"
+                                height="20"
+                                width="20"
+                                alt="github image">
+                            GitHub Repository</a><br>
+                        <span>Project notes:</span>
+                        <ul>
+                            <li>Illustrates the use of basics of coding graphics using vectors</li>
+                            <li>Demonstrates the use of importing modules in Python</li>
+                        </ul>
+                        <h5>Graphical output:</h5>
+                        <div class="project-images d-flex justify-content-center">
+                            <img class="img-fluid showcase-image"
+                                 src="https://raw.githubusercontent.com/bchadwic/triangle-illusion/main/triangle-illusion.gif"
+                                 alt="image of triangle graphic"/>
+                        </div>
+                        <a href="#" class="float-right link-text m-2" role="button" data-toggle="collapse"
+                           data-target="#collapseSix"><code>▲ Collapse</code></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact card -->
+    <div id="contact-card" class="card card-body-theme collapse mb-2" data-parent="#main-card">
+        <!-- contact header -->
+        <div id="contact-body" class="card-body">
+            <h5 class="card-title">Ben Chadwick <br><span class="small">Software Developer</span></h5>
+            <p class="card-text">
+                <a class="link-text" href="tel:2538610387"><u>(253)-861-0387</u></a><br>
+                <a class="link-text" href="mailto:bchadwick@mail.greenriver.edu"><u>bchadwick@mail.greenriver.edu</u></a>
+            </p>
+        </div>
+        <!-- media list -->
+        <ul class="list-group list-group-flush">
+            <!-- LinkedIn list element -->
+            <li class="list-group-item list-theme">
+                <div class="d-flex flex-lg-row flex-column justify-content-between">
+                    <div class="mt-sm-3 mb-1"><a href="https://www.linkedin.com/in/ben-chadwick-820428185/" target="_blank">
+                                                <img id="linkedIn" class="rounded" src="images/linkedin.png"
+                                                                      alt="linkedin logo"></a></div>
+                    <div class="ml-lg-3">
+                        Check out my work experience, education, and current LinkedIn Learning
+                        courses!
+                    </div>
+                </div>
+            </li>
+            <!-- GitHub list element -->
+            <li class="list-group-item list-theme">
+                <div class="d-flex flex-lg-row flex-column-reverse justify-content-between">
+                    <div>Look at projects I've been working on and topics I am interested in!</div>
+                    <div><a href="https://github.com/bchadwic" target="_blank"><img id="github" class="rounded mb-2"
+                                                                                    src="images/github.jpg"
+                                                                                    alt="github logo"></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Resume list element -->
+            <li class="list-group-item list-theme">
+                <div class="d-flex flex-lg-row flex-column justify-content-between">
+                    <div class="mt-sm-2"><a href="../files/Resume-Ben-Chadwick.pdf" download>
+                        <button class="btn btn-danger px-4 mb-2"><strong>Resume</strong></button>
+                    </a></div>
+                    <div class="ml-lg-3">Click to download my resume or visit it online
+                        <a class="link-text"
+                           href="http://bchadwick.greenriverdev.com/305/Resume/index.html"
+                           target="_blank"><u>here</u></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- closing contact information paragraph -->
+        <div class="card-body">
+            <p class="card-text">I am currently looking for both work opportunities and internships. Please feel free to
+                contact me at any of the above
+                communication facets. Thank you for visiting my website and please fill out my
+                <a class="link-text" href="http://bchadwick.greenriverdev.com/305/guestbook/index.php"
+                   target="_blank"><u><strong>Guestbook</strong></u></a>
+                if you find the time!</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    background-image: url("../images/backgroundImage.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.active, .nav-header:hover{
+    text-decoration: overline;
+    text-decoration-color: #009fb3;
+}
+
+.nav-header{
+    font-size: 30px;
+}
+
+code {
+    color: #b8ffbd;
+}
+
+.card {
+    border-width: thin;
+    border-color: #b8ffbd;
+}
+
+.bg-black{
+    background-color: black !important;
+    color: #b8ffbd;
+}
+
+.text-black {
+    color: black;
+}
+
+.badge-java {
+    background-color: darkorange;
+}
+
+.badge-php {
+    background-color: rebeccapurple;
+}
+
+#about-body {
+    border-top-style: solid;
+    border-color: #b8ffbd;
+    border-width: thin;
+}
+
+#about-card {
+    max-width: 38%;
+    min-width: 280px;
+}
+
+#about-image {
+    height: auto;
+}
+
+#project-card {
+    min-width: 40%;
+}
+
+#contact-card {
+    max-width: 38%;
+    min-width: 280px;
+}
+
+#linkedIn {
+    height: 35px;
+    width: auto;
+}
+
+#github {
+    height: 40px;
+    width: auto;
+}
+
+.showcase-image {
+    max-width: 40%;
+    height: auto;
+}
+
+.card-body-theme {
+    background-color: black;
+    color: #b8ffbd;
+}
+
+.list-theme {
+    background-color: black;
+    color: #b8ffbd;
+    border: thin solid #b8ffbd;
+}
+
+#main-card {
+    padding-right: 16px !important;
+
+}
+
+.card-body {
+    border-top-style: solid;
+    border-color: #b8ffbd;
+
+}
+
+.link-text {
+    color: #b8ffbd;
+}
+
+@media screen and (max-width: 530px){
+
+    #main-card {
+        padding-right: 16px !important;
+    }
+
+    .nav-header{
+        font-size: 18px;
+    }
+
+    #nav {
+        padding-right: 25px;
+    }
+
+    #nav-list{
+        padding-right: 0px !important;
+    }
+
+}

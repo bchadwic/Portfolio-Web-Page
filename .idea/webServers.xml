@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ed305055-76be-4c92-a112-f7ce3411c2ef" name="bchadwi1" url="http://bchadwick.greenriverdev.com">
+        <fileTransfer rootFolder="/home/bchadwi1/public_html/" accessType="SFTP" host="bchadwick.greenriverdev.com" port="18765" sshConfigId="621e29c8-d26e-4b7a-b6fe-af8160eaa99b" sshConfig="bchadwi1@bchadwick.greenriverdev.com:18765 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
